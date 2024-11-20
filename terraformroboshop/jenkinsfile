@@ -5,12 +5,12 @@ pipeline {
         
         stage('Terraform init') {
             steps {
-                sh 'terraform init'
+                echo "hi this is new commit"
             }
         }
-        stage('Terraform plan') {
+        stage('Testing') {
             steps {
-                sh 'terraform plan'
+                echo "testing"
             }
         }
         
