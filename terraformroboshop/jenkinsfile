@@ -15,4 +15,21 @@ pipeline {
         }
         
     }
+    post {
+        always {
+            echo 'This will run after all stages, no matter what.'
+        }
+        success {
+            echo 'This will run only if the pipeline succeeds.'
+        }
+        failure {
+            echo 'This will run only if the pipeline fails.'
+        }
+        unstable {
+            echo 'This will run only if the pipeline is unstable.'
+        }
+        changed {
+            echo 'This will run if the build status has changed from the previous build.'
+        }
+    }
 }
